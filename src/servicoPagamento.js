@@ -1,17 +1,17 @@
-export default class ServicoDePagamento {
+export default class ServicoPagamento {
     #pagamentos;
     constructor() {
         this.#pagamentos = [];
     }
 
-    realizarPagamentos(codigoDeBarras, empresa, valor) {
+    realizarPagamentos(codigoBarras, empresa, valor) {
 
 
-        const categoria = valor > 100.00 ? 'Cara' : 'Padrão';
+        const categoria = valor > 100.00 ? 'cara' : 'padrão';
 
         this.#pagamentos.push({
 
-            codigoDeBarras: codigoDeBarras,
+            codigoBarras: codigoBarras,
             empresa: empresa,
             valor: valor,
             categoria: categoria
